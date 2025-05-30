@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Text-Utils</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">HELLO</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                    <a class="nav-link" href="#">About us</a>
+                    <a class="nav-link" href="/contactus">Contact</a>
+                    <a class="nav-link" href="/navigator">Navigator</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <form action="/analyze" method="post"> {% csrf_token %}
+        <div class="container mt-5">
+            <div class="text-center">
+                <label for="exampleFormControlTextarea1" class="form-label">Textarea</label>
+            </div>
+            <div class="d-flex justify-content-center p-3 bg-light shadow-lg rounded">
+                <textarea class="form-control w-50" id="exampleFormControlTextarea1" rows="9" name="text"></textarea>
+            </div>
+        </div>
+        <div class="form-check form-switch d-flex justify-content-center">
+            <input class="form-check-input" type="checkbox" role="switch" name="removepunc" id="removepunc">
+            <label class="form-check-label" for="removepunc">Remove Punctuations</label>
+        </div>
+        <div class="form-check form-switch d-flex justify-content-center">
+            <input class="form-check-input" type="checkbox" role="switch" name="capitalize"  id="capitalize">
+            <label class="form-check-label" for="capitalize">Capitalize</label>
+        </div>
+        <div class="form-check form-switch d-flex justify-content-center">
+            <input class="form-check-input" type="checkbox" role="switch" name="charcount" id="charcount">
+            <label class="form-check-label" for="charcount">Count Characters</label>
+        </div>
+        <div class="d-flex justify-content-center mt-2">
+            <button type="submit" class="btn btn-dark">Analyze</button>
+        </div>
+        
+    </form>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
